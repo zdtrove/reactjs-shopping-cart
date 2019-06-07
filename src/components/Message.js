@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Message() {
-    return (
-        <h3>
-            <span className="badge amber darken-2">Mua Hàng Thành Công !</span>
-        </h3>
-    );
+class Message extends Component {
+    render() {
+        var { message } = this.props;
+        return (
+            <h3>
+                <span className="badge amber darken-2">
+                    { message }
+                </span>
+            </h3>
+        );
+    }
 }
 
 export default Message;
